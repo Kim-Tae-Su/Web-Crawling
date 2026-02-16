@@ -19,13 +19,10 @@ CRM 시스템은 웹 기반 UI로만 제공되며,
 기존 웹 UI 접근 흐름을 자동화하는 웹 크롤링 기반 방식을 선택하였다.
 
 ### 시스템 아키텍처
+본 시스템은 Selenium 기반 웹 UI 자동화를 통해 목록 페이지에서 대상 데이터 링크를 수집하고,  
+수집된 링크를 기준으로 상세 페이지에 접근하여 HTML/DOM 파싱을 통해 데이터를 정제·저장하는 구조로 설계되었다
 
-본 시스템은 실제 사용자의 웹 UI 접근 흐름을 자동화하는 방식으로 설계되었다.
-
-User → Selenium → CRM System → HTML Parsing →  
-Link Crawling → CSV Saving
-
-![CRM Crawling Architecture](images/architecture.png)
+<img src="images/new_archi.png" alt="CRM Crawling Architecture" width="600"/>
 
 ### 프로젝트 목표
 - 웹 UI 기반 CRM 시스템에서 장비 및 고객 이력 데이터 자동 수집
@@ -87,7 +84,7 @@ CRM 시스템은 스크롤을 내릴 때마다 데이터가 동적으로 로드�
 
 이를 통해 서버 및 클라이언트 리소스를 효율적으로 제어하였다.
 
-## Web Crawling Automation Flow
+## 3-1. Web Crawling Automation Flow
 
 CRM 웹 UI의 실제 사용자 동작 흐름을 기반으로 다음 단계를 자동화하였다.
 
